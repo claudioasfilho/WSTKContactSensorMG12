@@ -193,9 +193,7 @@ const EmberAfGenericClusterFunction emberAfFuncArrayOtaConfigurationClusterServe
   extern EmberEventControl emberAfPluginButtonInterfaceButton1PressedEventControl; \
   extern EmberEventControl emberAfPluginButtonInterfaceButton1ReleasedEventControl; \
   extern EmberEventControl emberAfPluginButtonInterfaceButtonTimeoutEventControl; \
-  extern EmberEventControl emberAfPluginConnectionManagerPollEventControl; \
-  extern EmberEventControl emberAfPluginConnectionManagerRebootEventControl; \
-  extern EmberEventControl emberAfPluginConnectionManagerRejoinEventControl; \
+  extern EmberEventControl emberAfPluginFindAndBindInitiatorCheckTargetResponsesEventControl; \
   extern EmberEventControl emberAfPluginFormAndJoinCleanupEventControl; \
   extern EmberEventControl emberAfPluginGpioSensorDebounceEventControl; \
   extern EmberEventControl emberAfPluginGpioSensorInterruptEventControl; \
@@ -208,9 +206,6 @@ const EmberAfGenericClusterFunction emberAfFuncArrayOtaConfigurationClusterServe
   extern EmberEventControl emberAfPluginOtaStorageSimpleEepromPageEraseEventControl; \
   extern EmberEventControl emberAfPluginReportingTickEventControl; \
   extern EmberEventControl emberAfPluginScanDispatchScanEventControl; \
-  extern EmberEventControl emberAfPluginSilabsDeviceUiButtonPressCountEventControl; \
-  extern EmberEventControl emberAfPluginSilabsDeviceUiInitEventControl; \
-  extern EmberEventControl emberAfPluginSilabsDeviceUiLedBlinkEventControl; \
   extern EmberEventControl emberAfPluginTemperatureMeasurementServerReadEventControl; \
   extern EmberEventControl emberAfPluginUpdateTcLinkKeyBeginTcLinkKeyUpdateEventControl; \
   extern void emberAfPluginButtonInterfaceButton0PressedEventHandler(void); \
@@ -218,9 +213,7 @@ const EmberAfGenericClusterFunction emberAfFuncArrayOtaConfigurationClusterServe
   extern void emberAfPluginButtonInterfaceButton1PressedEventHandler(void); \
   extern void emberAfPluginButtonInterfaceButton1ReleasedEventHandler(void); \
   extern void emberAfPluginButtonInterfaceButtonTimeoutEventHandler(void); \
-  extern void emberAfPluginConnectionManagerPollEventHandler(void); \
-  extern void emberAfPluginConnectionManagerRebootEventHandler(void); \
-  extern void emberAfPluginConnectionManagerRejoinEventHandler(void); \
+  extern void emberAfPluginFindAndBindInitiatorCheckTargetResponsesEventHandler(void); \
   extern void emberAfPluginFormAndJoinCleanupEventHandler(void); \
   extern void emberAfPluginGpioSensorDebounceEventHandler(void); \
   extern void emberAfPluginGpioSensorInterruptEventHandler(void); \
@@ -233,9 +226,6 @@ const EmberAfGenericClusterFunction emberAfFuncArrayOtaConfigurationClusterServe
   extern void emberAfPluginOtaStorageSimpleEepromPageEraseEventHandler(void); \
   extern void emberAfPluginReportingTickEventHandler(void); \
   extern void emberAfPluginScanDispatchScanEventHandler(void); \
-  extern void emberAfPluginSilabsDeviceUiButtonPressCountEventHandler(void); \
-  extern void emberAfPluginSilabsDeviceUiInitEventHandler(void); \
-  extern void emberAfPluginSilabsDeviceUiLedBlinkEventHandler(void); \
   extern void emberAfPluginTemperatureMeasurementServerReadEventHandler(void); \
   extern void emberAfPluginUpdateTcLinkKeyBeginTcLinkKeyUpdateEventHandler(void); \
   static void networkEventWrapper(EmberEventControl *control, EmberAfNetworkEventHandler handler, uint8_t networkIndex) \
@@ -287,9 +277,7 @@ const EmberAfGenericClusterFunction emberAfFuncArrayOtaConfigurationClusterServe
   { &emberAfPluginButtonInterfaceButton1PressedEventControl, emberAfPluginButtonInterfaceButton1PressedEventHandler }, \
   { &emberAfPluginButtonInterfaceButton1ReleasedEventControl, emberAfPluginButtonInterfaceButton1ReleasedEventHandler }, \
   { &emberAfPluginButtonInterfaceButtonTimeoutEventControl, emberAfPluginButtonInterfaceButtonTimeoutEventHandler }, \
-  { &emberAfPluginConnectionManagerPollEventControl, emberAfPluginConnectionManagerPollEventHandler }, \
-  { &emberAfPluginConnectionManagerRebootEventControl, emberAfPluginConnectionManagerRebootEventHandler }, \
-  { &emberAfPluginConnectionManagerRejoinEventControl, emberAfPluginConnectionManagerRejoinEventHandler }, \
+  { &emberAfPluginFindAndBindInitiatorCheckTargetResponsesEventControl, emberAfPluginFindAndBindInitiatorCheckTargetResponsesEventHandler }, \
   { &emberAfPluginFormAndJoinCleanupEventControl, emberAfPluginFormAndJoinCleanupEventHandler }, \
   { &emberAfPluginGpioSensorDebounceEventControl, emberAfPluginGpioSensorDebounceEventHandler }, \
   { &emberAfPluginGpioSensorInterruptEventControl, emberAfPluginGpioSensorInterruptEventHandler }, \
@@ -302,9 +290,6 @@ const EmberAfGenericClusterFunction emberAfFuncArrayOtaConfigurationClusterServe
   { &emberAfPluginOtaStorageSimpleEepromPageEraseEventControl, emberAfPluginOtaStorageSimpleEepromPageEraseEventHandler }, \
   { &emberAfPluginReportingTickEventControl, emberAfPluginReportingTickEventHandler }, \
   { &emberAfPluginScanDispatchScanEventControl, emberAfPluginScanDispatchScanEventHandler }, \
-  { &emberAfPluginSilabsDeviceUiButtonPressCountEventControl, emberAfPluginSilabsDeviceUiButtonPressCountEventHandler }, \
-  { &emberAfPluginSilabsDeviceUiInitEventControl, emberAfPluginSilabsDeviceUiInitEventHandler }, \
-  { &emberAfPluginSilabsDeviceUiLedBlinkEventControl, emberAfPluginSilabsDeviceUiLedBlinkEventHandler }, \
   { &emberAfPluginTemperatureMeasurementServerReadEventControl, emberAfPluginTemperatureMeasurementServerReadEventHandler }, \
   { &emberAfPluginUpdateTcLinkKeyBeginTcLinkKeyUpdateEventControl, emberAfPluginUpdateTcLinkKeyBeginTcLinkKeyUpdateEventHandler }, \
   { &emberAfPluginEndDeviceSupportMoveNetworkEventControls[0], emberAfPluginEndDeviceSupportMoveNetworkEventWrapper0 }, \
@@ -327,9 +312,7 @@ const EmberAfGenericClusterFunction emberAfFuncArrayOtaConfigurationClusterServe
   "Button Interface Plugin Button1Pressed",  \
   "Button Interface Plugin Button1Released",  \
   "Button Interface Plugin ButtonTimeout",  \
-  "Connection Manager Plugin Poll",  \
-  "Connection Manager Plugin Reboot",  \
-  "Connection Manager Plugin Rejoin",  \
+  "Find and Bind Initiator Plugin CheckTargetResponses",  \
   "Form and Join Library Plugin Cleanup",  \
   "GPIO Sensor Interface Plugin Debounce",  \
   "GPIO Sensor Interface Plugin Interrupt",  \
@@ -342,9 +325,6 @@ const EmberAfGenericClusterFunction emberAfFuncArrayOtaConfigurationClusterServe
   "OTA Simple Storage EEPROM Driver Plugin PageErase",  \
   "Reporting Plugin Tick",  \
   "Scan Dispatch Plugin Scan",  \
-  "Silicon Labs Device UI Plugin ButtonPressCount",  \
-  "Silicon Labs Device UI Plugin Init",  \
-  "Silicon Labs Device UI Plugin LedBlink",  \
   "Temperature Measurement Server Cluster Plugin Read",  \
   "Update TC Link Key Plugin BeginTcLinkKeyUpdate",  \
   "End Device Support Plugin Move NWK 0", \
@@ -373,9 +353,7 @@ const EmberAfGenericClusterFunction emberAfFuncArrayOtaConfigurationClusterServe
   void emberAfPluginReportingInitCallback(void); \
   void emberAfPluginGpioSensorInitCallback(void); \
   void emberAfPluginTemperatureMeasurementServerInitCallback(void); \
-  void emberAfPluginSilabsDeviceUiInitCallback(void); \
   void emberAfPluginIdleSleepInitCallback(void); \
-  void emberAfPluginConnectionManagerInitCallback(void); \
   void emberAfPluginCountersInitCallback(void); \
 
 
@@ -385,9 +363,7 @@ const EmberAfGenericClusterFunction emberAfFuncArrayOtaConfigurationClusterServe
   emberAfPluginReportingInitCallback(); \
   emberAfPluginGpioSensorInitCallback(); \
   emberAfPluginTemperatureMeasurementServerInitCallback(); \
-  emberAfPluginSilabsDeviceUiInitCallback(); \
   emberAfPluginIdleSleepInitCallback(); \
-  emberAfPluginConnectionManagerInitCallback(); \
   emberAfPluginCountersInitCallback(); \
 
 
@@ -408,7 +384,6 @@ const EmberAfGenericClusterFunction emberAfFuncArrayOtaConfigurationClusterServe
   void emberAfPluginTemperatureMeasurementServerStackStatusCallback(EmberStatus status); \
   void emberAfPluginNetworkSteeringStackStatusCallback(EmberStatus status); \
   void emberAfPluginIasZoneServerStackStatusCallback(EmberStatus status); \
-  void emberAfPluginConnectionManagerStackStatusCallback(EmberStatus status); \
 
 
 #define EMBER_AF_GENERATED_PLUGIN_STACK_STATUS_FUNCTION_CALLS \
@@ -420,14 +395,13 @@ const EmberAfGenericClusterFunction emberAfFuncArrayOtaConfigurationClusterServe
   emberAfPluginTemperatureMeasurementServerStackStatusCallback(status); \
   emberAfPluginNetworkSteeringStackStatusCallback(status); \
   emberAfPluginIasZoneServerStackStatusCallback(status); \
-  emberAfPluginConnectionManagerStackStatusCallback(status); \
 
 
 // Generated data for the command discovery
 #define GENERATED_COMMANDS { \
     { 0x0000, 0x00, COMMAND_MASK_INCOMING_SERVER }, /* Basic / ResetToFactoryDefaults */ \
     { 0x0003, 0x00, COMMAND_MASK_OUTGOING_CLIENT | COMMAND_MASK_INCOMING_SERVER }, /* Identify / Identify */ \
-    { 0x0003, 0x00, COMMAND_MASK_OUTGOING_SERVER }, /* Identify / IdentifyQueryResponse */ \
+    { 0x0003, 0x00, COMMAND_MASK_OUTGOING_SERVER | COMMAND_MASK_INCOMING_CLIENT }, /* Identify / IdentifyQueryResponse */ \
     { 0x0003, 0x01, COMMAND_MASK_OUTGOING_CLIENT | COMMAND_MASK_INCOMING_SERVER }, /* Identify / IdentifyQuery */ \
     { 0x0005, 0x00, COMMAND_MASK_OUTGOING_CLIENT }, /* Scenes / AddScene */ \
     { 0x0005, 0x01, COMMAND_MASK_OUTGOING_CLIENT }, /* Scenes / ViewScene */ \

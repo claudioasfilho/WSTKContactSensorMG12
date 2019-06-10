@@ -26812,35 +26812,6 @@ void emberAfCameBackFromEM4Callback(void);
 /** @} END Idle/Sleep Plugin Callbacks */
 
 
-/** @name Connection Manager Plugin Callbacks */
-// @{
-
-/** @brief Network join finished
- *
- * This callback is fired when the Connection Manager plugin is finished with
- * the network search process. The result of the operation will be returned as
- * the status parameter.
- *
- * @param status   Ver.: always
- */
-void emberAfPluginConnectionManagerFinishedCallback(EmberStatus status);
-/** @brief Begin searching for network to join
- *
- * This function is called by the Connection Manager Plugin when it starts
- * to search for a new network.  It is normally used to trigger a UI event to
- * notify the user that the device is currently searching for a network.
- */
-void emberAfPluginConnectionManagerStartNetworkSearchCallback(void);
-/** @brief Leave the currently joined network
- *
- * This function is called by the Connection Manager Plugin when the device
- * is about to leave the network.  It is normally used to trigger a UI event to
- * notify the user of a network leave.
- */
-void emberAfPluginConnectionManagerLeaveNetworkCallback(void);
-/** @} END Connection Manager Plugin Callbacks */
-
-
 /** @name Counters Plugin Callbacks */
 // @{
 
@@ -26869,6 +26840,37 @@ void emberAfPluginCountersRolloverCallback(EmberCounterType type);
  */
 void emberAfPluginBasicResetToFactoryDefaultsCallback(uint8_t endpoint);
 /** @} END Basic Server Cluster Plugin Callbacks */
+
+
+/** @name Find and Bind Initiator Plugin Callbacks */
+// @{
+
+/** @brief Bind Target
+ *
+ * This callback with enable the user to programmatically decide if they want
+ * to bind with a potential target. The plugin will try to bind with this
+ * target if and only if the function returns true. By default, the callback
+ * tells the plugin to try to bind with the target. If the binding type is
+ * changed to ::EMBER_MULTICAST_BINDING, a multicast binding will be created.
+ *
+ * @param nodeId short ID of the potential target Ver.: always
+ * @param bindingEntry The binding entry for that target. Ver.: always
+ * @param groupName The name of the group if a multicast binding is created.
+ * Ver.: always
+ */
+bool emberAfPluginFindAndBindInitiatorBindTargetCallback(EmberNodeId nodeId,
+                                                         EmberBindingTableEntry *bindingEntry,
+                                                         uint8_t *groupName);
+/** @brief Complete
+ *
+ * This callback is fired by the initiator when the Find and Bind process is
+ * complete.
+ *
+ * @param status Status code describing the completion of the find and bind
+ * process Ver.: always
+ */
+void emberAfPluginFindAndBindInitiatorCompleteCallback(EmberStatus status);
+/** @} END Find and Bind Initiator Plugin Callbacks */
 
 
 /** @} END addtogroup */

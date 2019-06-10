@@ -19,9 +19,9 @@ Image Type:           0x0000
 Firmware Version:     0x00000001
 Stack Version:        0x0002
 Header String:        EBL Z3ContactSensorv654
-Total Image Size:     227110 bytes
+Total Image Size:     227678 bytes
 Total Tags:           1
   ID:                 0x0000   (Upgrade Image)
-  Length:             227048 bytes
+  Length:             227616 bytes
 
 
